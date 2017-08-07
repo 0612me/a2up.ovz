@@ -23,7 +23,7 @@ ADD files/start.sh /conf/start.sh
 ADD files/aria2.conf /conf/aria2.conf
 ADD files/on-complete.sh /conf/on-complete.sh
 
-RUN chmod +x /conf-copy/start.sh
+RUN chmod +x /conf/start.sh
 
 WORKDIR /
 VOLUME ["/data"]
