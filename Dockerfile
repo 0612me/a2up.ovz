@@ -19,9 +19,9 @@ RUN wget https://downloads.rclone.org/rclone-current-linux-amd64.zip && unzip rc
 	rm -rf ./rclone-*
 
 ADD files/rclone.conf /conf/rclone.conf
-ADD files/start.sh /conf-copy/start.sh
-ADD files/aria2.conf /conf-copy/aria2.conf
-ADD files/on-complete.sh /conf-copy/on-complete.sh
+ADD files/start.sh /conf/start.sh
+ADD files/aria2.conf /conf/aria2.conf
+ADD files/on-complete.sh /conf/on-complete.sh
 
 RUN chmod +x /conf-copy/start.sh
 
@@ -31,4 +31,4 @@ VOLUME ["/conf"]
 EXPOSE 6800
 EXPOSE 80
 
-CMD ["/conf-copy/start.sh"]
+CMD ["/conf/start.sh"]
