@@ -5,7 +5,6 @@ MAINTAINER xujinkai <ja3k777@xuji3nkai.net>
 RUN apk update && \
 	apk add --no-cache --update bash && \
 	mkdir -p /conf && \
-	mkdir -p /conf-copy && \
 	mkdir -p /data && \
 	apk add --no-cache --update aria2 && \
 	apk add git && \
