@@ -8,9 +8,9 @@ unzip rclone-current-linux-amd64.zip
 chmod 0755 ./rclone-*/rclone
 cp ./rclone-*/rclone /usr/bin/
 rm -rf ./rclone-*
-echo "/root/.config/rclone/rclone.conf"
 
 git clone https://github.com/binux/yaaw /var/www/html/yaaw
 sed -i 's/:6800/:63001/g' /var/www/html/yaaw/js/yaaw.js
 
 screen -d -m -S a2 bash -c 'aria2c --conf-path=/root/a2.conf'
+echo "/root/.config/rclone/rclone.conf"
