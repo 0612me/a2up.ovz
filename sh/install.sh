@@ -13,5 +13,4 @@ echo "/root/.config/rclone/rclone.conf"
 git clone https://github.com/binux/yaaw /var/www/html/yaaw
 sed -i 's/:6800/:63001/g' /var/www/html/yaaw/js/yaaw.js
 
-screen -S a2
-aria2c --conf-path=/root/a2.conf
+screen -d -m -S a2 bash -c 'aria2c --conf-path=/root/a2.conf'
