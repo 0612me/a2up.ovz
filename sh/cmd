@@ -1,0 +1,1 @@
+wget https://github.com/0612me/a2up.ovz/raw/master/sh/a2gd-install.sh && chmod a+x a2gd-install.sh && ./a2gd-install.sh
