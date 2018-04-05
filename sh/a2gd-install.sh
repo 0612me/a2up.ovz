@@ -1,4 +1,4 @@
-apt-get update && apt-get install -y git unzip screen wget apache2 aria2
+apt-get update && apt-get install -y git unzip screen wget apache2 aria2 vim
 wget https://github.com/0612me/a2up.ovz/raw/master/sh/a2up.conf -P /root/
 wget https://github.com/0612me/a2up.ovz/raw/master/sh/a2up-on-complete.sh -P /root/
 chmod a+x /root/a2up-on-complete.sh
