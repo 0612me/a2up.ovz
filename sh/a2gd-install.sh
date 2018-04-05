@@ -13,4 +13,5 @@ git clone https://github.com/binux/yaaw /var/www/html/yaaw
 sed -i 's/:6800/:63001/g' /var/www/html/yaaw/js/yaaw.js
 
 screen -d -m -S a2up bash -c 'aria2c --conf-path=/root/a2up.conf'
+echo q | rclone config
 echo "/root/.config/rclone/rclone.conf"
