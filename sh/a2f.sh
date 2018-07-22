@@ -3,10 +3,12 @@ apt-get install -y aria2 libgnutls28-dev nettle-dev libgmp-dev libssh2-1-dev lib
 service apache2 restart
 
 wget https://github.com/0612me/a2up.ovz/raw/master/sh/a2f.conf -P /var/www/html/
-wget https://github.com/0612me/a2up.ovz/raw/master/sh/a2up.conf -P /var/www/html/
+wget https://github.com/0612me/a2up.ovz/raw/master/sh/a2up2.conf -P /var/www/html/
 git clone https://github.com/binux/yaaw /var/www/html/yaaw
 git clone https://github.com/kalcaddle/KodExplorer /var/www/html/kod
 sed -i 's/:6800/:63005/g' /var/www/html/yaaw/js/yaaw.js
+git clone https://github.com/binux/yaaw /var/www/html/yaaw2
+sed -i 's/:6800/:63006/g' /var/www/html/yaaw2/js/yaaw.js
 
 curl https://rclone.org/install.sh | bash
 curl https://i.jpillora.com/cloud-torrent! | bash
@@ -14,3 +16,4 @@ curl -L https://raw.githubusercontent.com/snail007/goproxy/master/install_auto.s
 
 usermod -s /bin/bash www-data
 chown -R  www-data:www-data /var/www
+su -c '/usr/bin/aria2c --conf-path=/var/www/html/a2up2.conf' www-data
