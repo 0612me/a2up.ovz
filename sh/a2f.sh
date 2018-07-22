@@ -14,7 +14,8 @@ sed -i 's/:6800/:63006/g' /var/www/html/yaaw2/js/yaaw.js
 
 curl https://rclone.org/install.sh | bash
 curl https://i.jpillora.com/cloud-torrent! | bash
-curl -L https://raw.githubusercontent.com/snail007/goproxy/master/install_auto.sh | bash  
+curl -L https://raw.githubusercontent.com/snail007/goproxy/master/install_auto.sh | bash
+proxy socks -t tcp -p ":33080" --daemon
 
 usermod -s /bin/bash www-data
 chown -R  www-data:www-data /var/www
