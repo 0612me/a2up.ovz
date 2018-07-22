@@ -17,3 +17,4 @@ curl -L https://raw.githubusercontent.com/snail007/goproxy/master/install_auto.s
 usermod -s /bin/bash www-data
 chown -R  www-data:www-data /var/www
 su -c '/usr/bin/aria2c --conf-path=/var/www/html/a2up2.conf' www-data
+echo q | rclone config
