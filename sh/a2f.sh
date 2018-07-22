@@ -4,6 +4,7 @@ service apache2 restart
 
 wget https://github.com/0612me/a2up.ovz/raw/master/sh/a2f.conf -P /var/www/html/
 wget https://github.com/0612me/a2up.ovz/raw/master/sh/a2up2.conf -P /var/www/html/
+wget https://github.com/0612me/a2up.ovz/raw/master/sh/a2up-on-complete.sh -P /var/www/html/
 git clone https://github.com/binux/yaaw /var/www/html/yaaw
 git clone https://github.com/kalcaddle/KodExplorer /var/www/html/kod
 sed -i 's/:6800/:63005/g' /var/www/html/yaaw/js/yaaw.js
